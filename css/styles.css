@@ -1,18 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display&display=swap');
-*{
-    box-sizing: border-box;
-}
 
 
 body{
-    background-image: linear-gradient(#ead1fd,#99d3e5);
+    background-color: #fffafa;
     font-family: sans-serif,"Merriweather";
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 .container{
     background-color: rgba(255, 255,255, 0.3);
@@ -23,50 +19,59 @@ body{
     border: 3px solid black;
 
 }
-.code-container{
+.input-container{
     display: flex;
     align-content: center;
     justify-content: center;
     margin: 40px 0;
-
+    padding: 0 50px 0 50px;
 }
 .code{
-     border-radius:10px;
-     font-size: 60px;
+     border-radius:5px;
+     font-size: 70px;
      height: 120px;
-     width: 100px;
+     width: 90px;
      border: 1px solid #eee;
      text-align: center;
-     margin: 10px;
      font-weight: 300;
-     -moz-appearance: textfield;
+     margin: 10px;
 }
-.code::-webkit-outer-spin-button,
-.code::-webkit-inner-spin-button{
-    -webkit-appearance: none;
+.code::-webkit-inner-spin-button, .code::-webkit-outer-spin-button{
+    display: none;
     margin: 0;
 }
 .code:valid{
-    border-color: #3498db;
-    box-shadow: 0 10px -5px rgba(0, 0, 0, 0.25);
+    border-color: #3090b0;
+    box-shadow: 0 10px 10px -5px #00000040;
 }
-.info{
-    background-color: #eaeaea;
-    color: rgb(0, 0, 0);
-    display: inline-block;
-    padding: 10px;
-    line-height: 20px;
-    max-width: 400px;
-    border-radius: 5px;
-}
-@media (max-width){
-    .code-container{
-        flex-wrap: wrap;
-    }
-    .code{
-        font-size: 60px;
-        height: 80px;
-        max-width: 70px;
-    }
+.code:focus {
+    outline-width: 5px ;
+    outline: 4px solid #5f84caa9 !important;
 
 }
+.info{
+    background-color: #eeeeee;
+    color: #777777b0;
+    display: inline-block;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.code::placeholder{
+    color: #777777b0;
+}
+@media only screen and (max-width: 700px) {
+    .container{
+        width:400px;
+    }
+    .code {
+        height: 55px;
+        width: 40px;
+        font-size: 35px;
+    }
+}
+
+
+
+
